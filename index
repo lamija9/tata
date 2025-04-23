@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Moj je tata</title>
+        <style>
+            body {
+                background: linear-gradient(to right, lightblue, lightgreen);
+                font-family: 'Verdana', sans-serif;
+            }
+            h1 {
+                color: rgb(18, 127, 94);
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1> Moj tata je lijep </h1>
+        <h2> Moj tata ima velike zaliske </h2>
+        <img src="chodinzalizak.jpg" alt="Najveci zalizak" style="width: 600px; height: auto;">
+        <video id="videoPlayer" controls width="400" autoplay loop>
+            <source src="zalisci.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button onclick="document.getElementById('videoPlayer').play()">Otvori</button>
+
+    </body>
+
+
+
+
+
+</html>
