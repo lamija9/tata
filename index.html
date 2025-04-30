@@ -5,11 +5,22 @@
         <title>Moj je tata</title>
         <style>
             body {
-                background: linear-gradient(to right, lightblue, lightgreen);
+                background: url('chodinzalizak.jpg') no-repeat center center fixed;
+                background-size: cover;
                 font-family: 'Verdana', sans-serif;
+                text-align: center; /* Center content horizontally */
             }
             h1 {
-                color: rgb(18, 127, 94);
+                color: #ffffff; /* White text for contrast */
+                font-family: 'Trebuchet MS', sans-serif; /* Modern and clean font */
+                font-size: 65px;
+                text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow for emphasis */
+            }
+            h2 {
+                color: #f0f8ff; /* Light cyan for harmony with the background */
+                font-family: 'Trebuchet MS', sans-serif;
+                font-size: 45px;
+                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
             }
         </style>
     </head>
@@ -17,17 +28,14 @@
     <body>
         <h1> Moj tata je lijep </h1>
         <h2> Moj tata ima velike zaliske </h2>
-        <img src="chodinzalizak.jpg" alt="Najveci zalizak" style="width: 600px; height: auto;">
-        <video id="videoPlayer" controls width="400" autoplay loop>
-            <source src="zalisci.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <button onclick="document.getElementById('videoPlayer').play()">Otvori</button>
+        <audio id="banSound" src="ban-sound.mp3"></audio>
+        <button style="background: linear-gradient(to right, orange, red, darkred); color: white; font-size: 50px; font-family: 'Arial Black', Gadget, sans-serif; padding: 30px 60px; border: 5px solid gold; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;" 
+                onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.7)';" 
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.5)';"
+                onclick="document.getElementById('banSound').play();">
+            BAN
+        </button>
 
     </body>
-
-
-
-
 
 </html>
