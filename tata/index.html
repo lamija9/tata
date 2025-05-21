@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Moj je tata</title>
+        <style>
+            body {
+                background: url('chodinzalizak.jpg') no-repeat center center fixed;
+                background-size: cover;
+                font-family: 'Verdana', sans-serif;
+                text-align: center; /* Center content horizontally */
+            }
+            h1 {
+                color: #ffffff; /* White text for contrast */
+                font-family: 'Trebuchet MS', sans-serif; /* Modern and clean font */
+                font-size: 65px;
+                text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow for emphasis */
+                text-transform: uppercase; /* Make text uppercase */
+                animation: fadeInOut 3s infinite; /* Add animation */
+            }
+
+            @keyframes fadeInOut {
+                0%, 100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0.5;
+                }
+            }
+
+            h2 {
+                color: #f0f8ff; /* Light cyan for harmony with the background */
+                font-family: 'Trebuchet MS', sans-serif;
+                font-size: 45px;
+                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+                transition: transform 0.3s; /* Smooth transition for hover effect */
+            }
+
+            h2:hover {
+                animation: bounce 2s infinite; /* Trigger bounce animation on hover */
+            }
+
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            header {
+                background: rgba(139, 0, 0, 0.7); /* Transparent dark red */
+                color: white;
+                padding: 20px;
+                font-family: 'Trebuchet MS', sans-serif;
+                font-size: 40px;
+                text-align: center;
+                text-transform: uppercase; /* Uppercase text */
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            }
+
+            footer {
+                background: rgba(139, 0, 0, 0.7); /* Transparent dark red */
+                color: white;
+                padding: 20px;
+                font-family: 'Trebuchet MS', sans-serif;
+                font-size: 30px;
+                text-align: center;
+                text-transform: uppercase; /* Uppercase text */
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+                margin-top: 20px;
+            }
+
+            @keyframes fadeInScale {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.8);
+                }
+                50% {
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes dramaticCorrect {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.5) rotate(0deg);
+                }
+                50% {
+                    opacity: 1;
+                    transform: scale(1.2) rotate(15deg);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+
+            @keyframes dramaticIncorrect {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.5) rotate(0deg);
+                }
+                50% {
+                    opacity: 1;
+                    transform: scale(1.2) rotate(-15deg);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+
+            @keyframes flyInCorrect {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-100%) scale(0.5);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateY(10%) scale(1.2);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+
+            @keyframes flyInIncorrect {
+                0% {
+                    opacity: 0;
+                    transform: translateY(100%) scale(0.5);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateY(-10%) scale(1.2);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+
+            /* Overlay styles */
+            #overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                text-align: center;
+            }
+
+            #overlayContent {
+                font-family: 'Trebuchet MS', sans-serif;
+                font-size: 50px;
+                color: white;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            Za mog tatu
+        </header>
+        <h1> Moj tata je lijep </h1>
+        <h2> Moj tata ima velike zaliske </h2>
+        <audio id="banSound" src="zalisci.mp3"></audio>
+        <audio id="yesSound" src="yess.mp3"></audio>
+        <audio id="kojeSound" src="koje.mp3"></audio>
+        <audio id="prviSound" src="prvi.mp3"></audio>
+        <audio id="wrongSound" src="wrong.mp3"></audio>
+        <audio id="rightSound" src="right.mp3"></audio>
+        <button style="background: darkred; color: white; font-size: 50px; font-family: 'Arial Black', Gadget, sans-serif; padding: 30px 60px; border: none; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin: 20px;" 
+                onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.7)';" 
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.5)';"
+                onclick="document.getElementById('banSound').play();">
+            BAN
+        </button>
+        <button style="background: darkred; color: white; font-size: 50px; font-family: 'Arial Black', Gadget, sans-serif; padding: 30px 60px; border: none; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin: 20px;" 
+                onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.7)';" 
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.5)';"
+                onclick="document.getElementById('yesSound').play();">
+            YESSIRSKI
+        </button>
+        <button style="background: darkred; color: white; font-size: 50px; font-family: 'Arial Black', Gadget, sans-serif; padding: 30px 60px; border: none; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin: 20px;" 
+                onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.7)';" 
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.5)';"
+                onclick="document.getElementById('prviSound').play();">
+            ĆALE
+        </button>
+        <video id="chodaVideo" controls width="600" style="margin: 20px auto; display: block; border: 10px double; border-image: linear-gradient(to right, darkred, gold, darkred) 1; border-radius: 25px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);" 
+               onmouseover="this.play();" onmouseout="this.pause();">
+            <source src="choda.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div style="margin-top: 40px; text-align: center;">
+            <p style="font-family: 'Trebuchet MS', sans-serif; font-size: 20px; color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
+                Da li Choda ima najveće zaliske na svijetu?
+            </p>
+            <input id="answerInput" type="text" placeholder="Unesite odgovor" style="padding: 10px; font-size: 16px; border-radius: 5px; border: 2px solid darkred; width: 300px;">
+            <button onclick="checkAnswer()" style="background: darkred; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                Provjeri
+            </button>
+            <p id="resultMessage" style="font-family: 'Trebuchet MS', sans-serif; font-size: 18px; color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); margin-top: 10px; animation: none;"></p>
+        </div>
+        <button style="background: darkred; color: white; font-size: 50px; font-family: 'Arial Black', Gadget, sans-serif; padding: 30px 60px; border: none; border-radius: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin: 20px;" 
+                onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.7)';" 
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.5)';"
+                onclick="window.location.href='https://www.youtube.com/@chodalive';">
+            KLIKNI ZA SURPRISE
+        </button>
+        <div id="overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: none; justify-content: center; align-items: center; z-index: 1000; text-align: center;">
+            <div id="overlayContent" style="font-family: 'Trebuchet MS', sans-serif; font-size: 50px; color: white; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); animation: none;">
+                <!-- Content will be dynamically updated -->
+            </div>
+        </div>
+        <script>
+            function checkAnswer() {
+                const answer = document.getElementById('answerInput').value.trim().toUpperCase();
+                const overlay = document.getElementById('overlay');
+                const overlayContent = document.getElementById('overlayContent');
+                const wrongSound = document.getElementById('wrongSound');
+                const rightSound = document.getElementById('rightSound');
+                overlay.style.display = 'flex';
+
+                if (answer === 'DA') {
+                    overlay.style.backgroundColor = 'rgba(0, 128, 0, 0.9)'; // Green background
+                    overlayContent.innerHTML = '✔ Tačan odgovor!';
+                    overlayContent.style.color = 'lightgreen';
+                    overlayContent.style.animation = 'flyInCorrect 1s ease-in-out';
+                    rightSound.play();
+                } else {
+                    overlay.style.backgroundColor = 'rgba(255, 0, 0, 0.9)'; // Red background
+                    overlayContent.innerHTML = '✖ Netačan odgovor!';
+                    overlayContent.style.color = 'white';
+                    overlayContent.style.animation = 'flyInIncorrect 1s ease-in-out';
+                    wrongSound.play();
+                }
+
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 3000); // Hide overlay after 3 seconds
+            }
+        </script>
+        <footer style="background: rgba(139, 0, 0, 0.7); color: white; padding: 20px; font-family: 'Trebuchet MS', sans-serif; font-size: 30px; text-align: center; text-transform: uppercase; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); margin-top: 20px;">
+            JUL 10. 1856. - 2025.
+        </footer>
+    </body>
+
+</html>
